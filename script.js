@@ -187,25 +187,45 @@ function initPackageSwitching() {
 // FAQ ACCORDION
 // =========================
 function initFAQ() {
-  const faqQuestions = document.querySelectorAll('.faq-question');
-  
-  faqQuestions.forEach(question => {
+  const faqItems = document.querySelectorAll('.faq-item');
+
+  faqItems.forEach((item) => {
+    const question = item.querySelector('.faq-question');
+    const answer = item.querySelector('.faq-answer');
+
+    if (!question || !answer) return;
+
+    answer.hidden = true;
+    question.setAttribute('aria-expanded', 'false');
+
     question.addEventListener('click', () => {
-      const faqItem = question.closest('.faq-item');
-      const isActive = faqItem.classList.contains('active');
-      
-      // Close all other items
-      document.querySelectorAll('.faq-item').forEach(item => {
-        item.classList.remove('active');
+      const isOpen = item.classList.contains('active');
+
+      faqItems.forEach((otherItem) => {
+        const otherQuestion = otherItem.querySelector('.faq-question');
+        const otherAnswer = otherItem.querySelector('.faq-answer');
+
+        otherItem.classList.remove('active');
+
+        if (otherQuestion) {
+          otherQuestion.setAttribute('aria-expanded', 'false');
+        }
+
+        if (otherAnswer) {
+          otherAnswer.hidden = true;
+        }
       });
-      
-      // Toggle current item
-      if (!isActive) {
-        faqItem.classList.add('active');
+
+      if (!isOpen) {
+        item.classList.add('active');
+        question.setAttribute('aria-expanded', 'true');
+        answer.hidden = false;
       }
     });
   });
 }
+
+document.addEventListener('DOMContentLoaded', initFAQ);
 
 // =========================
 // BACK TO TOP BUTTON
