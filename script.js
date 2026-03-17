@@ -187,64 +187,34 @@ function initPackageSwitching() {
 // FAQ ACCORDION
 // =========================
 function initFAQ() {
-  const faqItems = document.querySelectorAll('.faq-item');
-
-  if (!faqItems.length) return;
-
-  faqItems.forEach((item) => {
-    const question = item.querySelector('.faq-question');
-    const answer = item.querySelector('.faq-answer');
-    const chevron = item.querySelector('.faq-chevron');
-
-    if (!question || !answer) return;
-
-    // Osiguraj zatvoreno stanje na startu
-    answer.style.display = 'none';
-    question.setAttribute('aria-expanded', 'false');
-
-    if (chevron) {
-      chevron.style.transform = 'rotate(0deg)';
-    }
-
-    question.addEventListener('click', () => {
-      const isOpen = answer.style.display === 'block';
-
-      // Zatvori sve
-      faqItems.forEach((otherItem) => {
-        const otherQuestion = otherItem.querySelector('.faq-question');
-        const otherAnswer = otherItem.querySelector('.faq-answer');
-        const otherChevron = otherItem.querySelector('.faq-chevron');
-
-        if (otherAnswer) {
-          otherAnswer.style.display = 'none';
-        }
-
-        if (otherQuestion) {
-          otherQuestion.setAttribute('aria-expanded', 'false');
-        }
-
-        if (otherChevron) {
-          otherChevron.style.transform = 'rotate(0deg)';
+  const faqQuestions = document.querySelectorAll('.faq-question');
+  
+  faqQuestions.forEach((question) => {
+    question.addEventListener('click', (e) => {
+      e.preventDefault();
+      
+      const faqItem = question.closest('.faq-item');
+      if (!faqItem) return;
+      
+      const isCurrentlyActive = faqItem.classList.contains('active');
+      const allFaqItems = document.querySelectorAll('.faq-item');
+      
+      // Close all other items
+      allFaqItems.forEach((item) => {
+        if (item !== faqItem) {
+          item.classList.remove('active');
         }
       });
-
-      // Ako nije bio otvoren, otvori ga
-      if (!isOpen) {
-        answer.style.display = 'block';
-        question.setAttribute('aria-expanded', 'true');
-
-        if (chevron) {
-          chevron.style.transform = 'rotate(180deg)';
-        }
+      
+      // Toggle current item
+      if (isCurrentlyActive) {
+        faqItem.classList.remove('active');
+      } else {
+        faqItem.classList.add('active');
       }
     });
   });
 }
-
-// Pokretanje kada se stranica učita
-document.addEventListener('DOMContentLoaded', function () {
-  initFAQ();
-});
 
 // =========================
 // BACK TO TOP BUTTON
