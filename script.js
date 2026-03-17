@@ -189,43 +189,62 @@ function initPackageSwitching() {
 function initFAQ() {
   const faqItems = document.querySelectorAll('.faq-item');
 
+  if (!faqItems.length) return;
+
   faqItems.forEach((item) => {
     const question = item.querySelector('.faq-question');
     const answer = item.querySelector('.faq-answer');
+    const chevron = item.querySelector('.faq-chevron');
 
     if (!question || !answer) return;
 
-    answer.hidden = true;
+    // Osiguraj zatvoreno stanje na startu
+    answer.style.display = 'none';
     question.setAttribute('aria-expanded', 'false');
 
-    question.addEventListener('click', () => {
-      const isOpen = item.classList.contains('active');
+    if (chevron) {
+      chevron.style.transform = 'rotate(0deg)';
+    }
 
+    question.addEventListener('click', () => {
+      const isOpen = answer.style.display === 'block';
+
+      // Zatvori sve
       faqItems.forEach((otherItem) => {
         const otherQuestion = otherItem.querySelector('.faq-question');
         const otherAnswer = otherItem.querySelector('.faq-answer');
+        const otherChevron = otherItem.querySelector('.faq-chevron');
 
-        otherItem.classList.remove('active');
+        if (otherAnswer) {
+          otherAnswer.style.display = 'none';
+        }
 
         if (otherQuestion) {
           otherQuestion.setAttribute('aria-expanded', 'false');
         }
 
-        if (otherAnswer) {
-          otherAnswer.hidden = true;
+        if (otherChevron) {
+          otherChevron.style.transform = 'rotate(0deg)';
         }
       });
 
+      // Ako nije bio otvoren, otvori ga
       if (!isOpen) {
-        item.classList.add('active');
+        answer.style.display = 'block';
         question.setAttribute('aria-expanded', 'true');
-        answer.hidden = false;
+
+        if (chevron) {
+          chevron.style.transform = 'rotate(180deg)';
+        }
       }
     });
   });
 }
 
-document.addEventListener('DOMContentLoaded', initFAQ);
+// Pokretanje kada se stranica učita
+document.addEventListener('DOMContentLoaded', function () {
+  initFAQ();
+});
 
 // =========================
 // BACK TO TOP BUTTON
