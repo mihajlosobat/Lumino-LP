@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="LUMINO - Vaš pouzdani partner za solarnu energiju u Srbiji. Izaberite između Standard i Premium paketa.">
+    <title>LUMINO - Solarna Energija | Standard & Premium Paketi</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="header-container">
+            <div class="header-logo">
+                <img 
+                    src="https://customer-assets.emergentagent.com/job_paket-switch/artifacts/c9n52ih3_Lumino_Logo.png" 
+                    alt="LUMINO Logo" 
+                    class="logo-image"
+                />
+            </div>
+            
+            <nav class="header-nav">
+                <button class="nav-link" data-scroll-to="packages">Paketi</button>
+                <button class="nav-link" data-scroll-to="benefits">Prednosti</button>
+                <button class="nav-link" data-scroll-to="testimonials">Recenzije</button>
+                <button class="nav-link" data-scroll-to="faq">FAQ</button>
+                <button class="nav-link-cta" data-scroll-to="contact">Kontakt</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+        <div class="hero-container">
+            <div class="hero-content-wrapper">
+                <div class="hero-video-side">
+                    <div class="video-container">
+                        <video
+                            id="hero-video"
+                            class="hero-video"
+                            loop
+                            muted
+                            playsinline
+                            autoplay
+                            preload="auto"
+                            poster="https://customer-assets.emergentagent.com/job_paket-switch/artifacts/v7dvocyr_solar-panel-generates-green-electricity.jpg"
+                        >
+                            <source 
+                                src="https://customer-assets.emergentagent.com/job_paket-switch/artifacts/hqbjbqbk_1385969_Sun_Reflection_Solar_Panels_1920x1080.mp4" 
+                                type="video/mp4" 
+                            />
+                            Vaš pretraživač ne podržava video reprodukciju.
+                        </video>
+                        
+                        <div class="video-overlay">
+                            <div class="video-logo-watermark">
+                                <img 
+                                    src="https://customer-assets.emergentagent.com/job_paket-switch/artifacts/c9n52ih3_Lumino_Logo.png" 
+                                    alt="LUMINO" 
+                                    class="video-logo"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-text-side">
+                    <div class="eyebrow-text">LUMINO SOLARNI PAKETI</div>
+                    <h1 class="hero-title">
+                        Izaberite paket koji odgovara vašem domu.
+                    </h1>
+                    <p class="hero-description">
+                        Izaberite idealnu soluciju za uštedu energije i uporedite Standard i Premium paket na jednostavan i pregledan način.
+                    </p>
+                    <div class="package-button-group">
+                        <button
+                            class="package-btn active"
+                            data-package="standard"
+                        >
+                            Standard paket
+                        </button>
+                        <button
+                            class="package-btn"
+                            data-package="premium"
+                        >
+                            Premium paket
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PACKAGE COMPARISON SECTION -->
+    <section class="package-section" id="packages">
+        <div class="package-banner">
+            <img 
+                src="https://customer-assets.emergentagent.com/job_paket-switch/artifacts/299nasul_solar-energy-concept-young-happy-family-is-standing-near-solar-panels-holding-electric-light-bulb.jpg" 
+                alt="Package Banner"
+                class="package-banner-image"
+            />
+            <div class="package-banner-overlay">
+                <div class="package-banner-content">
+                    <div class="package-label-badge">Standard paket</div>
+                    <h2 class="package-banner-title">Pouzdan ulaz u solarnu energiju</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="package-container">
+            <div class="package-content">
+                <div class="package-header">
+                    <p class="package-description">Rešenje za korisnike koji žele jasan balans između investicije, kvaliteta i dugoročne uštede.</p>
+                </div>
+                
+                <div class="package-cards-grid">
+                    <!-- Cards will be dynamically inserted here -->
+                </div>
+
+                <div class="package-switch-bottom">
+                    <button class="package-switch-button">
+                        <span>Pogledajte Premium paket</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS SECTION -->
+    <section class="stats-section">
+        <div class="stats-container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-value">500+</div>
+                    <div class="stat-label">Instaliranih sistema</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">15+</div>
+                    <div class="stat-label">Godina iskustva</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">€1500+</div>
+                    <div class="stat-label">Godišnja ušteda</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">24/7</div>
+                    <div class="stat-label">Tehnička podrška</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BENEFITS SECTION -->
+    <section class="benefits-section" id="benefits">
+        <div class="benefits-container">
+            <div class="section-header-center">
+                <h2 class="section-title">Zašto izabrati solarne sisteme?</h2>
+                <p class="section-subtitle">
+                    Investirajte u budućnost i uživajte u brojnim prednostima solarne energije.
+                </p>
+            </div>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon-wrapper">
+                        <svg class="benefit-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                    </div>
+                    <h3 class="benefit-title">Smanjite račune za struju</h3>
+                    <p class="benefit-description">Uštedite do 70% na troškovima električne energije uz solarni sistem prilagođen vašim potrebama.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon-wrapper">
+                        <svg class="benefit-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                        </svg>
+                    </div>
+                    <h3 class="benefit-title">Energetska nezavisnost</h3>
+                    <p class="benefit-description">Budite manje zavisni od mreže i obezbedite stabilno napajanje za vaš dom.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon-wrapper">
+                        <svg class="benefit-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 8h1a4 4 0 1 1 0 8h-1"></path>
+                            <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"></path>
+                            <line x1="6" y1="2" x2="6" y2="4"></line>
+                            <line x1="10" y1="2" x2="10" y2="4"></line>
+                            <line x1="14" y1="2" x2="14" y2="4"></line>
+                        </svg>
+                    </div>
+                    <h3 class="benefit-title">Ekološki prihvatljivo</h3>
+                    <p class="benefit-description">Smanjite ugljeni otisak i doprinesite zaštiti životne sredine čistom energijom.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon-wrapper">
+                        <svg class="benefit-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="8" r="7"></circle>
+                            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                        </svg>
+                    </div>
+                    <h3 class="benefit-title">Dugotrajno rešenje</h3>
+                    <p class="benefit-description">Investirajte u tehnologiju koja traje decenijama uz minimalnu potrebu za održavanjem.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY SECTION -->
+    <section class="gallery-section">
+        <div class="gallery-container">
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <div class="gallery-image-wrapper">
+                        <img 
+                            src="https://customer-assets.emergentagent.com/job_paket-switch/artifacts/esuitc1c_man-worker-firld-by-solar-panels%20%281%29.jpg" 
+                            alt="Radnik u polju sa solarnim panelima"
+                            class="gallery-image"
+                        />
+                        <div class="gallery-overlay">
+                            <h3 class="gallery-title">Štednja</h3>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <div class="gallery-image-wrapper">
+                        <img 
+                            src="https://customer-assets.emergentagent.com/job_paket-switch/artifacts/a0sek83s_man-worker-firld-by-solar-panels.jpg" 
+                            alt="Stručnjak inspektuje solarne panele"
+                            class="gallery-image"
+                        />
+                        <div class="gallery-overlay">
+                            <h3 class="gallery-title">Sigurnost</h3>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <div class="gallery-image-wrapper">
+                        <img 
+                            src="https://customer-assets.emergentagent.com/job_paket-switch/artifacts/v7dvocyr_solar-panel-generates-green-electricity.jpg" 
+                            alt="Solarni panel generiše zelenu energiju"
+                            class="gallery-image"
+                        />
+                        <div class="gallery-overlay">
+                            <h3 class="gallery-title">Budućnost</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION -->
+    <section class="testimonials-section" id="testimonials">
+        <div class="testimonials-container">
+            <div class="section-header-center">
+                <h2 class="section-title">Šta kažu naši klijenti</h2>
+                <p class="section-subtitle">
+                    Pročitajte iskustva zadovoljnih korisnika LUMINO solarnih sistema.
+                </p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <svg class="quote-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"></path>
+                        <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path>
+                    </svg>
+                    <p class="testimonial-text">Odličan sistem i profesionalna instalacija. Računi za struju su nam upola manji nego ranije.</p>
+                    <div class="testimonial-rating">
+                        <svg class="star-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                        </svg>
+                        <svg class="star-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                        </svg>
+                        <svg class="star-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                        </svg>
+                        <svg class="star-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                        </svg>
+                        <svg class="star-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                        </svg>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-name">Marko Jovanović</div>
+                        <div class="author-location">Kraljevo</div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <svg class="quote-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"></path>
+                        <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path>
+                    </svg>
+                    <p class="testimonial-text">Veoma zadovoljna premium paketom. Sistem radi besprekorno i isplatio se brže nego što sam očekivala.</p>
+                    <div class="testimonial-rating">
+                        <svg class="star-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                        </svg>
+                        <svg class="star-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                        </svg>
+                        <svg class="star-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                        </svg>
+                        <svg class="star-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                        </svg>
+                        <svg class="star-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                        </svg>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-name">Ana Petrović</div>
+                        <div class="author-location">Čačak</div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <svg class="quote-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"></path>
+                        <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path>
+                    </svg>
+                    <p class="testimonial-text">Tim iz Lumino je bio izuzetno stručan i sve je prošlo glatko. Toplo preporučujem!</p>
+                    <div class="testimonial-rating">
+                        <svg class="star-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                        </svg>
+                        <svg class="star-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                        </svg>
+                        <svg class="star-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                        </svg>
+                        <svg class="star-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                        </svg>
+                        <svg class="star-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                        </svg>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-name">Stefan Nikolić</div>
+                        <div class="author-location">Kruševac</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="faq-section" id="faq">
+        <div class="faq-container">
+            <div class="section-header-center">
+                <h2 class="section-title">Često postavljana pitanja</h2>
+                <p class="section-subtitle">
+                    Odgovori na najčešća pitanja o LUMINO solarnim sistemima.
+                </p>
+            </div>
+            
+            <div class="faq-content">
+                <div class="faq-accordion">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Koliko traje instalacija solarnog sistema?</span>
+                            <svg class="faq-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            Instalacija standardno traje 2-3 dana, u zavisnosti od složenosti objekta i izabranog paketa.
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Da li postoje subvencije za solarnu energiju?</span>
+                            <svg class="faq-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            Da, u Srbiji postoje različite mogućnosti za subvencije i povoljnije uslove finansiranja. Naš tim će vam pomoći da saznate više o trenutno dostupnim programima.
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Šta je razlika između Standard i Premium paketa?</span>
+                            <svg class="faq-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            Premium paket sadrži naprednije komponente, dodatne sigurnosne funkcije, premium podršku i duži garantni rok. Standard paket pruža odličan odnos cene i kvaliteta za većinu domaćinstava.
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Koliko sistem može da traje?</span>
+                            <svg class="faq-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            Solarni paneli imaju životni vek od 25-30 godina, dok je inverter dizajniran da traje 10-15 godina. Sistem zahteva minimalno održavanje.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LEAD FORM SECTION -->
+    <section class="lead-form-section" id="contact">
+        <div class="lead-form-container">
+            <div class="lead-form-header">
+                <h2 class="section-title">Zatražite besplatnu konsultaciju</h2>
+                <p class="section-subtitle">
+                    Popunite formu i naš tim će vas kontaktirati u najkraćem roku da razgovaramo o vašim potrebama.
+                </p>
+            </div>
+
+            <form id="lead-form" class="lead-form">
+                <div class="form-row">
+                    <div class="form-field">
+                        <label for="name" class="form-label">Ime *</label>
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            required
+                            class="form-input"
+                            placeholder="Unesite vaše ime"
+                        />
+                    </div>
+                    
+                    <div class="form-field">
+                        <label for="surname" class="form-label">Prezime *</label>
+                        <input
+                            type="text"
+                            id="surname"
+                            name="surname"
+                            required
+                            class="form-input"
+                            placeholder="Unesite vaše prezime"
+                        />
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-field">
+                        <label for="phone" class="form-label">Broj telefona *</label>
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            required
+                            class="form-input"
+                            placeholder="+381 60 123 4567"
+                        />
+                    </div>
+                    
+                    <div class="form-field">
+                        <label for="email" class="form-label">Email adresa *</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            required
+                            class="form-input"
+                            placeholder="vas.email@primer.com"
+                        />
+                    </div>
+                </div>
+
+                <div class="form-field-full">
+                    <label for="message" class="form-label">Opis vaših potreba *</label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        required
+                        class="form-textarea"
+                        placeholder="Opišite nam koje su vaše potrebe i očekivanja od solarnog sistema..."
+                        rows="5"
+                    ></textarea>
+                </div>
+
+                <div class="form-submit-wrapper">
+                    <button type="submit" class="form-submit-button">
+                        Pošaljite zahtev
+                    </button>
+                    <p class="form-privacy-text">
+                        Slanjem forme prihvatate našu politiku privatnosti
+                    </p>
+                </div>
+            </form>
+            
+            <div class="form-success-message hidden">
+                <svg class="success-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+                <h3 class="success-title">Hvala na interesovanju!</h3>
+                <p class="success-text">
+                    Primili smo vaš zahtev. Naš tim će vas kontaktirati u najkraćem mogućem roku.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA CONTACT SECTION -->
+    <section class="cta-contact-section">
+        <div class="cta-contact-container">
+            <div class="cta-contact-header">
+                <h2 class="cta-contact-title">
+                    Spremni za prelazak na solarnu energiju?
+                </h2>
+                <p class="cta-contact-description">
+                    Kontaktirajte nas danas i dobijte besplatnu konsultaciju i procenu potencijala vaše solarne elektrane.
+                </p>
+                
+                <div class="cta-contact-buttons">
+                    <a href="tel:+381643901348" class="cta-contact-btn primary">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                        <span>Kontaktirajte nas</span>
+                    </a>
+                    <button class="cta-contact-btn secondary">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        <span>Pošaljite upit</span>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="contact-info-cards">
+                <div class="contact-info-card">
+                    <div class="contact-icon-wrapper">
+                        <svg class="contact-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="contact-info-label">Telefon</h3>
+                    <p class="contact-info-text">+381 64 39 013 48</p>
+                </div>
+                
+                <div class="contact-info-card">
+                    <div class="contact-icon-wrapper">
+                        <svg class="contact-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                    </div>
+                    <h3 class="contact-info-label">Email</h3>
+                    <p class="contact-info-text">contact@lumino.rs</p>
+                </div>
+                
+                <div class="contact-info-card">
+                    <div class="contact-icon-wrapper">
+                        <svg class="contact-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                    </div>
+                    <h3 class="contact-info-label">Lokacija</h3>
+                    <p class="contact-info-text">Ibarska 121<br />Kraljevo 36000</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer-section">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <img 
+                            src="https://customer-assets.emergentagent.com/job_paket-switch/artifacts/c9n52ih3_Lumino_Logo.png" 
+                            alt="LUMINO Logo" 
+                            class="footer-logo-image"
+                        />
+                    </div>
+                    <p class="footer-description">
+                        Vaš pouzdani partner za solarnu energiju u Srbiji.
+                    </p>
+                </div>
+                
+                <div class="footer-column">
+                    <h4 class="footer-column-title">Kontakt</h4>
+                    <div class="footer-contact-list">
+                        <div class="footer-contact-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <span>contact@lumino.rs</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                            <span>+381 64 39 013 48</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <span>Kraljevo, Srbija</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h4 class="footer-column-title">Paketi</h4>
+                    <ul class="footer-links">
+                        <li><a href="#standard">Standard Paket</a></li>
+                        <li><a href="#premium">Premium Paket</a></li>
+                        <li><a href="#benefits">Prednosti</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4 class="footer-column-title">O nama</h4>
+                    <ul class="footer-links">
+                        <li><a href="#about">O kompaniji</a></li>
+                        <li><a href="#testimonials">Recenzije</a></li>
+                        <li><a href="#contact">Kontakt</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="footer-copyright">
+                    © 2024 LUMINO. Sva prava zadržana.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BACK TO TOP BUTTON -->
+    <button class="back-to-top-button" aria-label="Back to top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="19" x2="12" y2="5"></line>
+            <polyline points="5 12 12 5 19 12"></polyline>
+        </svg>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
