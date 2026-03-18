@@ -1,4 +1,5 @@
-// LUMINO Static Site JavaScript
+// LUMINO Landing Page - JavaScript
+// All interactive functionality
 
 // =========================
 // DATA
@@ -73,7 +74,7 @@ let activePackage = 'standard';
 function initHeaderScroll() {
   const header = document.querySelector('.site-header');
   
-  window.addEventListener('scroll', () => {
+  window.addEventListener('scroll', function() {
     if (window.scrollY > 50) {
       header.classList.add('scrolled');
     } else {
@@ -88,8 +89,8 @@ function initHeaderScroll() {
 function initNavigation() {
   const navLinks = document.querySelectorAll('.nav-link, .nav-link-cta');
   
-  navLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
+  navLinks.forEach(function(link) {
+    link.addEventListener('click', function(e) {
       const targetId = link.getAttribute('data-scroll-to');
       if (targetId) {
         const element = document.getElementById(targetId);
@@ -109,46 +110,58 @@ function updatePackageDisplay(packageType) {
   
   // Update banner image
   const bannerImage = document.querySelector('.package-banner-image');
-  bannerImage.src = packageData.image;
-  bannerImage.alt = packageData.imageAlt;
+  if (bannerImage) {
+    bannerImage.src = packageData.image;
+    bannerImage.alt = packageData.imageAlt;
+  }
   
   // Update label
   const labelBadge = document.querySelector('.package-label-badge');
-  labelBadge.textContent = packageData.label;
+  if (labelBadge) {
+    labelBadge.textContent = packageData.label;
+  }
   
   // Update title
   const bannerTitle = document.querySelector('.package-banner-title');
-  bannerTitle.textContent = packageData.title;
+  if (bannerTitle) {
+    bannerTitle.textContent = packageData.title;
+  }
   
   // Update description
   const description = document.querySelector('.package-description');
-  description.textContent = packageData.description;
+  if (description) {
+    description.textContent = packageData.description;
+  }
   
   // Update cards
   const cardsGrid = document.querySelector('.package-cards-grid');
-  cardsGrid.innerHTML = packageData.cards.map(card => `
-    <div class="package-card">
-      <h3 class="card-title">${card.title}</h3>
-      <ul class="card-features-list">
-        ${card.features.map(feature => `
-          <li class="card-feature-item">
-            <svg class="feature-check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="20 6 9 17 4 12"></polyline>
-            </svg>
-            <span>${feature}</span>
-          </li>
-        `).join('')}
-      </ul>
-    </div>
-  `).join('');
+  if (cardsGrid) {
+    cardsGrid.innerHTML = packageData.cards.map(function(card) {
+      return '<div class="package-card">' +
+        '<h3 class="card-title">' + card.title + '</h3>' +
+        '<ul class="card-features-list">' +
+        card.features.map(function(feature) {
+          return '<li class="card-feature-item">' +
+            '<svg class="feature-check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">' +
+            '<polyline points="20 6 9 17 4 12"></polyline>' +
+            '</svg>' +
+            '<span>' + feature + '</span>' +
+            '</li>';
+        }).join('') +
+        '</ul>' +
+        '</div>';
+    }).join('');
+  }
   
   // Update switch button text
   const switchButton = document.querySelector('.package-switch-button span');
-  const otherPackage = packageType === 'standard' ? 'Premium paket' : 'Standard paket';
-  switchButton.textContent = `Pogledajte ${otherPackage}`;
+  if (switchButton) {
+    const otherPackage = packageType === 'standard' ? 'Premium paket' : 'Standard paket';
+    switchButton.textContent = 'Pogledajte ' + otherPackage;
+  }
   
   // Update active state on hero buttons
-  document.querySelectorAll('.package-btn').forEach(btn => {
+  document.querySelectorAll('.package-btn').forEach(function(btn) {
     const btnPackage = btn.getAttribute('data-package');
     if (btnPackage === packageType) {
       btn.classList.add('active');
@@ -167,8 +180,8 @@ function updatePackageDisplay(packageType) {
 function initPackageSwitching() {
   // Hero buttons
   const heroButtons = document.querySelectorAll('.package-btn');
-  heroButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
+  heroButtons.forEach(function(btn) {
+    btn.addEventListener('click', function() {
       const packageType = btn.getAttribute('data-package');
       activePackage = packageType;
       updatePackageDisplay(packageType);
@@ -177,40 +190,42 @@ function initPackageSwitching() {
   
   // Package section switch button
   const switchButton = document.querySelector('.package-switch-button');
-  switchButton.addEventListener('click', () => {
-    activePackage = activePackage === 'standard' ? 'premium' : 'standard';
-    updatePackageDisplay(activePackage);
-  });
+  if (switchButton) {
+    switchButton.addEventListener('click', function() {
+      activePackage = activePackage === 'standard' ? 'premium' : 'standard';
+      updatePackageDisplay(activePackage);
+    });
+  }
 }
 
 // =========================
-// FAQ ACCORDION
+// FAQ ACCORDION - FIXED VERSION
 // =========================
 function initFAQ() {
   const faqQuestions = document.querySelectorAll('.faq-question');
   
-  faqQuestions.forEach((question) => {
-    question.addEventListener('click', (e) => {
-      e.preventDefault();
-      
+  faqQuestions.forEach(function(question) {
+    question.addEventListener('click', function() {
       const faqItem = question.closest('.faq-item');
-      if (!faqItem) return;
+      const answer = faqItem.querySelector('.faq-answer');
+      const isActive = faqItem.classList.contains('active');
       
-      const isCurrentlyActive = faqItem.classList.contains('active');
-      const allFaqItems = document.querySelectorAll('.faq-item');
-      
-      // Close all other items
-      allFaqItems.forEach((item) => {
-        if (item !== faqItem) {
-          item.classList.remove('active');
+      // Close all other items first
+      document.querySelectorAll('.faq-item').forEach(function(item) {
+        item.classList.remove('active');
+        const itemAnswer = item.querySelector('.faq-answer');
+        if (itemAnswer) {
+          itemAnswer.style.maxHeight = '0';
         }
       });
       
       // Toggle current item
-      if (isCurrentlyActive) {
-        faqItem.classList.remove('active');
-      } else {
+      if (!isActive) {
         faqItem.classList.add('active');
+        if (answer) {
+          // Set max-height to scrollHeight for smooth animation
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+        }
       }
     });
   });
@@ -222,22 +237,24 @@ function initFAQ() {
 function initBackToTop() {
   const backToTopButton = document.querySelector('.back-to-top-button');
   
-  // Show/hide button based on scroll position
-  window.addEventListener('scroll', () => {
-    if (window.pageYOffset > 300) {
-      backToTopButton.classList.add('visible');
-    } else {
-      backToTopButton.classList.remove('visible');
-    }
-  });
-  
-  // Scroll to top on click
-  backToTopButton.addEventListener('click', () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
+  if (backToTopButton) {
+    // Show/hide button based on scroll position
+    window.addEventListener('scroll', function() {
+      if (window.pageYOffset > 300) {
+        backToTopButton.classList.add('visible');
+      } else {
+        backToTopButton.classList.remove('visible');
+      }
     });
-  });
+    
+    // Scroll to top on click
+    backToTopButton.addEventListener('click', function() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
 }
 
 // =========================
@@ -247,20 +264,22 @@ function initLeadForm() {
   const form = document.getElementById('lead-form');
   const successMessage = document.querySelector('.form-success-message');
   
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
-    // Hide form and show success message
-    form.classList.add('hidden');
-    successMessage.classList.remove('hidden');
-    
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      form.reset();
-      form.classList.remove('hidden');
-      successMessage.classList.add('hidden');
-    }, 3000);
-  });
+  if (form && successMessage) {
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Hide form and show success message
+      form.classList.add('hidden');
+      successMessage.classList.remove('hidden');
+      
+      // Reset form after 3 seconds
+      setTimeout(function() {
+        form.reset();
+        form.classList.remove('hidden');
+        successMessage.classList.add('hidden');
+      }, 3000);
+    });
+  }
 }
 
 // =========================
@@ -274,12 +293,12 @@ function initVideo() {
     video.load();
     
     // Try to play after a short delay
-    setTimeout(() => {
-      video.play().catch(err => {
+    setTimeout(function() {
+      video.play().catch(function(err) {
         console.log('Video autoplay prevented:', err);
         // If autoplay fails, try again after 1 second
-        setTimeout(() => {
-          video.play().catch(err2 => {
+        setTimeout(function() {
+          video.play().catch(function(err2) {
             console.log('Video autoplay still prevented:', err2);
           });
         }, 1000);
@@ -295,7 +314,7 @@ function initCTAButtons() {
   const ctaSecondaryBtn = document.querySelector('.cta-contact-btn.secondary');
   
   if (ctaSecondaryBtn) {
-    ctaSecondaryBtn.addEventListener('click', (e) => {
+    ctaSecondaryBtn.addEventListener('click', function(e) {
       e.preventDefault();
       const contactSection = document.getElementById('contact');
       if (contactSection) {
@@ -308,7 +327,9 @@ function initCTAButtons() {
 // =========================
 // INITIALIZE ALL
 // =========================
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
+  console.log('LUMINO site initialized');
+  
   initHeaderScroll();
   initNavigation();
   initPackageSwitching();
